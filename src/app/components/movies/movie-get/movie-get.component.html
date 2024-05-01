@@ -1,1 +1,17 @@
-<p>movie-get works!</p>
+<p-toast></p-toast>
+<div class="flex" [style]="{ width: '90%', margin: '0 auto', padding: '1.5%' }">
+    <div class="card flex justify-content-center" *ngFor="let movie of movies">
+        <p-card header="{{ movie.title }}" subheader="{{ movie.director }}" [style]="{ width: '360px' }">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" />
+            </ng-template>
+            <p>
+                {{ movie.publicationDate | date: 'dd/MM/yyyy' }}
+            </p>
+            <ng-template pTemplate="footer">
+                <p-button label="editar" icon="pi pi-pen-to-square"></p-button>
+                <p-button label="deletar" icon="pi pi-trash" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+            </ng-template>
+        </p-card>
+    </div>
+</div>

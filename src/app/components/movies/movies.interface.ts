@@ -11,6 +11,6 @@ export interface MovieGet {
 export interface MoviePost {
     title: string;
     director: string;
-    publicationDate: Date;
+    publicationDate: string;
     genre: string;
 }

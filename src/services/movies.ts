@@ -14,12 +14,16 @@ export class MoviesService {
         return this.http.get(this.url);
     }
 
+    getMovieById(id: number): Observable<any> {
+        return this.http.get(`${this.url}/find/${id}`);
+    }
+
     postMovies(data: any): Observable<any> {
         return this.http.post(this.url, data);
     }
 
     udpateMovies(id: number, data: any): Observable<any> {
-        return this.http.put(`${this.url}/${id}`, data);
+        return this.http.patch(`${this.url}/${id}`, data);
     }
 
     deleteMovies(id: number): Observable<any> {

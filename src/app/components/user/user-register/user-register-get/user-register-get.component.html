@@ -1,0 +1,56 @@
+<div class="card flex justify-content-center">
+    <form [formGroup]="formGroup" (submit)="submitForm()">
+        <div class="card flex justify-content-center container-input">
+            <label for="name">Name</label>
+            <input type="text" pInputText formControlName="name"/>
+        </div>
+        <div class="card flex justify-content-center container-input">
+            <label for="lastName">Sobrenome</label>
+            <input type="text" pInputText formControlName="lastName"/>
+        </div>
+        <div class="card flex justify-content-center container-input">
+            <label for="email">Email</label>
+            <input type="email" pInputText formControlName="email"/>
+        </div>
+        <div class="flex-auto container-input">
+            <span class="font-bold block mb-2">telefone</span>
+            <p-inputMask 
+                mask="(99) 9 9999-9999" 
+                formControlName="phoneNumber" 
+                placeholder="(99) 9 9999-9999" />
+        </div>
+        <div class="flex-auto container-input">
+            <span class="font-bold block mb-2">cpf</span>
+            <p-inputMask 
+                mask="999.999.999-99" 
+                formControlName="cpf" 
+                placeholder="999.999.999-99" />
+        </div>
+        <div class="flex-auto">
+            <label for="dataNascimento">Data de Nascimento</label>
+            <p-calendar
+            formControlName="dataNascimento"
+            [iconDisplay]="'input'" 
+            [showIcon]="true" 
+            inputId="icondisplay"  />
+        </div>
+        <div class="container-input">
+            <p-dropdown 
+            formControlName="sexo"
+            [options]="sexoSelect"
+            optionLabel="name"
+            placeholder="Digite o seu sexo" />
+        </div>
+        <div class="container-input">
+            <label for="password">Password</label>
+            <p-password class="input-password" formControlName="password" [toggleMask]="true" [feedback]="true" />
+        </div>
+        <div class="container-input">
+            <label for="confirmPassword">Confirm Password</label>
+            <p-password class="input-password" formControlName="confirmPassword" [toggleMask]="true" [feedback]="true" />
+        </div>
+        <div class="card flex justify-content-center">
+            <button pButton pRipple label="Enviar" class="p-button-success"></button>
+        </div>
+    </form>
+</div>

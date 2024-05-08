@@ -6,17 +6,27 @@
     </div>
     <div class="card flex justify-content-center focusLabel" [style]="{ width: '100%' , margin: '0 auto' }">
         <label for="title">title</label>
-        <input [style]="{ width: '100%', padding: '1rem', borderRadius: '7px', border: 'none' }" id="Title" type="text" pInputText name="movies.title" [(ngModel)]="movies.title" />
+        <input [style]="{ width: '100%', padding: '1rem', borderRadius: '7px', border: 'none' }" id="Title" type="text" pInputText name="movies.title" [(ngModel)]="movie.title" />
     </div>
     <div class="card flex justify-content-center focusLabel" [style]="{ width: '100%' , margin: '29px auto' }">
         <label for="director">director</label>
-        <input [style]="{ width: '100%', padding: '1rem', borderRadius: '7px', border: 'none' }" id="director" type="text" name="movies.director" pInputText [(ngModel)]="movies.director" />
+        <input
+        [style]="{ 
+        width: '100%',
+        padding: '1rem',
+        borderRadius: '7px',
+        border: 'none' }" 
+        id="director"
+        type="text"
+        name="movies.director"
+        pInputText
+        [(ngModel)]="movie.director" />
     </div>
     <div class="card flex justify-content-center" [style]="{ display: 'flex', flexDirection: 'rows', justifyContent: 'space-between', alignItems: 'center' }">
         <div [style]="{ width: '48%' }">
             <label for="publicationDate">publicationDate</label>
             <p-calendar 
-            [(ngModel)]="movies.publicationDate" 
+            [(ngModel)]="movie.publicationDate"
             inputId="publicationDate"
             [style]="{ width: '100%', border: 'none' }"
             name="movies.publicationDate"
@@ -24,7 +34,7 @@
         </div>
         <div [style]="{ width: '48%' }">
             <label for="genre">genre</label>
-            <input [style]="{ width: '100%', padding: '1rem', borderRadius: '7px', border: 'none', heigth: '100%' }" id="genre" type="text" name="movies.genre" pInputText [(ngModel)]="movies.genre" />
+            <input [style]="{ width: '100%', padding: '1rem', borderRadius: '7px', border: 'none', heigth: '100%' }" id="genre" type="text" name="movies.genre" pInputText [(ngModel)]="movie.genre" />
         </div>
     </div>
     <div class="card flex justify-content-center" [style]="{ width: '100%', marginTop: '25px' }">
